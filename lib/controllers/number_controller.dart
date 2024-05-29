@@ -5,15 +5,27 @@ class NumberController {
 
   NumberController._();
 
-  void increment() {
-    Number.instance.setCounter(Number.instance.getCounter() + 1);
+  void add(int value) {
+    Number.instance.setCounter(Number.instance.getCounter() + value);
   }
 
-  void decrement() {
-    Number.instance.setCounter(Number.instance.getCounter() - 1);
+  void subtract(int value) {
+    Number.instance.setCounter(Number.instance.getCounter() - value);
+  }
+
+  void multiply(int value) {
+    Number.instance.setCounter(Number.instance.getCounter() * value);
   }
 
   void reset() {
     Number.instance.setCounter(0);
+  }
+
+  String module() {
+    if (Number.instance.getCounter() % 2 == 0) {
+      return 'par';
+    } else {
+      return 'ímpar';
+    }
   }
 }
