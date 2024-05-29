@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 OutlinedButton mainButton({
   String text = '',
   Function()? buttonFunction,
-  Color buttonColor = Colors.white,
-  Color textColor = Colors.black,
+  Color buttonColor = Colors.black,
+  Color textColor = Colors.white,
 }) {
   return OutlinedButton(
     onPressed: buttonFunction,
